@@ -7,28 +7,29 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: {
-    title: '@umijs/max',
+    title: 'WalletDemo',
   },
+  // layout:false,
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      // redirect: '/home',
     },
-    {
-      name: '首页',
-      path: '/home',
-      component: './Home',
-    },
-    {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
-    },
-    {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
-    },
+    // {
+    //   name: '首页',
+    //   path: '/home',
+    //   component: './Home',
+    // },
+    // {
+    //   name: '权限演示',
+    //   path: '/access',
+    //   component: './Access',
+    // },
+    // {
+    //   name: ' CRUD 示例',
+    //   path: '/table',
+    //   component: './Table',
+    // },
   ],
   npmClient: 'yarn',
 });
