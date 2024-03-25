@@ -9,6 +9,7 @@ export default defineConfig({
   layout: {
     title: 'WalletDemo',
   },
+  dva:{},
   // layout:false,
   routes: [
     {
@@ -25,11 +26,11 @@ export default defineConfig({
     //   path: '/access',
     //   component: './Access',
     // },
-    // {
-    //   name: ' CRUD 示例',
-    //   path: '/table',
-    //   component: './Table',
-    // },
+    {
+      name: ' CRUD 示例',
+      path: '/table',
+      component: './Table',
+    },
   ],
   npmClient: 'yarn',
 });
