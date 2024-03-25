@@ -1,7 +1,8 @@
 import { queryAuth,updateAuth } from "@/services/demo/AuthController"
 export default {
   state:{
-    isLogin:false
+    isLogin:false,
+    isAuthOpen:false
   },
   effects:{
     *queryAuth({payload},{call,put}){
@@ -15,6 +16,18 @@ export default {
     }
   },
   reducers:{
+    queryAuthOpen(state,{payload}){
+      return {
+        ...state,
+        isAuthOpen:payload?.isAuthOpen
+      }
+    },
+    updateAuthOpen(state,{payload}){
+      return {
+        ...state,
+        isAuthOpen:payload?.isAuthOpen
+      }
+    },
     queryAuthSuccess(state,{payload}){
       return {
         ...state,

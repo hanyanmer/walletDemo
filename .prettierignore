@@ -1,3 +1,12 @@
 node_modules
+mock
 .umi
 .umi-production
+.cache
+.vscode
+src/services/api/**/*
+package.json
+package-lock.json
+yarn.lock
+public
+*.toml
