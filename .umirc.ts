@@ -6,21 +6,21 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
-  layout: {
-    title: 'WalletDemo',
-  },
+  // layout: {
+  //   title: 'WalletDemo',
+  // },
   dva:{},
   // layout:false,
   routes: [
     {
       path: '/',
-      // redirect: '/home',
+      redirect: '/home',
     },
-    // {
-    //   name: '首页',
-    //   path: '/home',
-    //   component: './Home',
-    // },
+    {
+      name: '首页',
+      path: '/home',
+      component: './Home',
+    },
     // {
     //   name: '权限演示',
     //   path: '/access',

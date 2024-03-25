@@ -1,18 +1,18 @@
-import Guide from '@/components/Guide';
-import { trim } from '@/utils/format';
 import { PageContainer } from '@ant-design/pro-components';
-import { useModel } from '@umijs/max';
-import styles from './index.less';
+import { connect, useModel } from '@umijs/max';
+// import styles from './index.less';
 
-const HomePage: React.FC = () => {
-  const { name } = useModel('global');
+const HomePage: React.FC = (props) => {
+  console.log(props)
+  const {auth} = props
   return (
     <PageContainer ghost>
-      <div className={styles.container}>
-        <Guide name={trim(name)} />
-      </div>
+      连接metamask的信息
+      {/* <div className={styles.container}>
+       111
+      </div> */}
     </PageContainer>
   );
 };
 
-export default HomePage;
+export default connect(({auth}:any)=>({auth}))(HomePage)
