@@ -9,9 +9,14 @@ export const VoucherEhtereum = new Metamask()
 
 // 连接钱包
 export function useConnect(){
+  // 用一个登录状态来更新connect的对象
   const connect = useCallback(async ()=>{
-    const walletInfo = await VoucherEhtereum.connect()
-    return walletInfo
+    const connectMatamask =  new Metamask()
+    connectMatamask.connect()
+    return {
+      connectService:connectMatamask,
+      walletInfo:connectMatamask?.getWalletInfo()
+    }
   },[])
 
   const disconnect = useCallback(()=>{

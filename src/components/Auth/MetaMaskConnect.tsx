@@ -2,6 +2,7 @@ import metamask from '@/assets/wallet/metamask.svg';
 import { connect } from '@umijs/max';
 import { Spin, message } from 'antd';
 import { useEffect, useState } from 'react';
+import store from 'store2';
 
 const MetaMaskConnect = (props:any)=>{
   const {auth, dispatch} = props
@@ -9,6 +10,7 @@ const MetaMaskConnect = (props:any)=>{
   const [connecting,setConnecting] = useState(false)
   const onConnect = async()=>{
     console.log('walletInfo',connectService)
+    store.set('walletInfo',connectService,false)
 
     setConnecting(true)
     await connectService.connect()

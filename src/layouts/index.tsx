@@ -25,8 +25,9 @@ const Layout=(props:any)=> {
       headerRender={()=>{
         return <div>helo</div>
         }}
+
       >
-        <div>
+      <div style={{backgroundColor:'white',height:'100vh'}}>
         <div style={{
           margin:'20px',
           display:'flex',

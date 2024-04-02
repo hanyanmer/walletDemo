@@ -38,6 +38,7 @@ const Auth=(props:any)=>{
       setConnectService(connectMatamask as any)
     }
     return ()=>{
+
       if(connectService){
         connectService.unconnect()
         setConnectService(null)
